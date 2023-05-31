@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    padding: 0 140px;
+    background: rgb(255,250,253);
+    background: linear-gradient(90deg, rgba(255,250,253,1) 25%, rgba(255,255,255,1) 73%, rgba(243,248,255,1) 100%);
+    overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+nav .logo{
+    cursor: pointer;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li{
+    text-decoration: none;
+    margin-right: 30px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+nav ul li:last-child{
+    margin-right: 0;
+}
+
+nav .cta button{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(4, 199, 189);
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.hero{
+    width: 100%;
+    height: 80vh;
+}
+
+.hero .container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.hero .container .left{
+    position: relative;
+    height: 100%;
+    width: 40%;
+}
+.hero .container .right{
+    width: 60%;
+}
+
+.hero__image{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: rgb(41,229,240);
+    background: linear-gradient(180deg, rgba(41,229,240,1) 75%, rgba(255,253,254,1) 97%);
+    border-radius: 71% 29% 52% 48% / 36% 98% 2% 64%;
+}
+
+ .hero__image img{
+    margin-top: -70px;
+    height: 160%;
+    width: 100%;
+    background-size: cover;
+    
+}
+
+.right{
+    padding-left: 20px;
+}
+
+.right .intro__text{
+    font-size: 2rem;
+    color: rgb(255, 114, 137);
+}
+
+.right .services{
+    font-size: 4rem;
+}
+
+.right .cta{
+    margin-top: 20px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 150px;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 20px 60px 20px 0;
+    width: fit-content;
+    border-bottom: 2px solid rgb(212, 212, 212);
+    cursor: pointer;
+}
+
+.right .cta span{
+    background-color: rgb(255, 114, 137);
+    padding: 7px;
+    border-top-right-radius: 5px;
+    color: white;
+    margin-right: 15px;
+}
+
+.right .socials{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0;
+    width: fit-content
+}
+
+.right .socials i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(41,229,240,1);
+    font-size: .8rem;
+    border: 2px solid rgba(41,229,240,1);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+section.services{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.services .carousel {
+    height: 400px;
+    margin: 0;
+    display: flex;
+    grid-template-rows: 500px 00px;
+    grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .services .service__intro{
+    padding: 0 20px;
+    height: 100%;
+  }
+  
+.services .service__intro p{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.services .service__intro h3{
+    font-size: 1.8rem;
+}
+
+  main#carousel {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 50vw;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    --items: 5;
+    --middle: 3;
+    --position: 0;
+    pointer-events: none;
+  }
+  
+  div.item {
+    position: absolute;
+    width: 270px;
+    height: 350px;
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    transform: rotateY(calc(-10deg * var(--r)))
+      translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+  }
+  
+  div.item:nth-of-type(1) {
+    --offset: 1;
+    border-radius: 5px;
+    box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+    -webkit-box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+    -moz-box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+  }
+  div.item:nth-of-type(2) {
+    --offset: 2;
+    border-radius: 5px;
+    box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+    -webkit-box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+    -moz-box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+  }
+  div.item:nth-of-type(3) {
+    --offset: 3;
+    border-radius: 5px;
+    box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+    -webkit-box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+    -moz-box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+  }
+  div.item:nth-of-type(4) {
+    --offset: 4;
+    border-radius: 5px;
+    box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+    -webkit-box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+    -moz-box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+  }
+  div.item:nth-of-type(5) {
+    --offset: 5;
+    border-radius: 5px;
+    box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+    -webkit-box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+    -moz-box-shadow: 2px 5px 16px 1px rgba(163,163,163,0.75);
+  }
+
+  section.services input{
+    position: relative;
+    top: 25%;
+    right: 20.5%;
+    margin-right: 5px;
+  }
+  
+  input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(1):checked ~ main#carousel {
+    --position: 1;
+  }
+  
+  input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(2):checked ~ main#carousel {
+    --position: 2;
+  }
+  
+  input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(3):checked ~ main#carousel {
+    --position: 3;
+  }
+  
+  input:nth-of-type(4) {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(4):checked ~ main#carousel {
+    --position: 4;
+  }
+  
+  input:nth-of-type(5) {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+  }
+  input:nth-of-type(5):checked ~ main#carousel {
+    --position: 5;
+  }
+  
+
+
